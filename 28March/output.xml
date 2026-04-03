@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on win32)" generated="2026-03-28T14:50:13.613531" rpa="false" schemaversion="5">
+<suite id="s1" name="Task2" source="C:\Users\DELL\Desktop\Capegemini Training\automation &amp;testing\28March\Task2.robot">
+<test id="s1-t1" name="Myntra" line="21">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-28T14:50:14.119956" level="INFO">Opening browser 'chrome' to base url 'https://www.myntra.com/'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-28T14:50:14.119581" elapsed="8.572498"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-28T14:50:22.695548" elapsed="0.331007"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-28T14:50:25.059053" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-28T14:50:23.057215" elapsed="2.002220"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2026-03-28T14:50:25.061754" level="INFO">Simulating Mouse Over on element 'xpath=//a[@data-group="women"]'.</msg>
+<arg>xpath=//a[@data-group="women"]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2026-03-28T14:50:25.060543" elapsed="0.389726"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-28T14:50:25.451341" level="INFO">Clicking element 'xpath=//ul[@class="desktop-navBlock"]//descendant::a[text()="Lehenga Cholis"]'.</msg>
+<arg>xpath=//ul[@class="desktop-navBlock"]//descendant::a[text()="Lehenga Cholis"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-28T14:50:25.450850" elapsed="3.908032"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-28T14:50:31.372047" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-28T14:50:29.369687" elapsed="2.002720"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//span[@data-colorhex='blue']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-28T14:50:31.373360" elapsed="0.390655"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-28T14:50:31.765921" level="INFO">Clicking element 'xpath=//span[@data-colorhex='blue']'.</msg>
+<arg>xpath=//span[@data-colorhex='blue']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-28T14:50:31.765208" elapsed="0.547137"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-28T14:50:33.389898" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-28T14:50:32.385583" elapsed="1.004669"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-03-28T14:50:33.725981" level="INFO">${details} = Girls Printed Lehenga Choli</msg>
+<var>${details}</var>
+<arg>xpath=(//li[@id=37990380]//descendant::h4)[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-28T14:50:33.394943" elapsed="0.331174"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${details}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-28T14:50:33.728665" elapsed="0.010117"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-28T14:50:35.742174" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-28T14:50:33.739839" elapsed="2.002685"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-28T14:50:35.743382" elapsed="3.160482"/>
+</kw>
+<status status="PASS" start="2026-03-28T14:50:14.117882" elapsed="24.787284"/>
+</test>
+<status status="PASS" start="2026-03-28T14:50:13.616809" elapsed="25.291758"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Task2" id="s1" pass="1" fail="0" skip="0">Task2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
