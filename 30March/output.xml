@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on win32)" generated="2026-03-30T12:34:05.912418" rpa="false" schemaversion="5">
+<suite id="s1" name="Waits" source="C:\Users\DELL\Desktop\Capegemini Training\automation &amp;testing\30March\waits.robot">
+<test id="s1-t1" name="implicit wait" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-30T12:34:07.200478" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-30T12:34:07.199944" elapsed="5.523671"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-30T12:34:12.724329" elapsed="0.041071"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-30T12:34:14.776648" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-30T12:34:12.775493" elapsed="2.001351"/>
+</kw>
+<kw name="Get Selenium Implicit Wait" owner="SeleniumLibrary">
+<msg time="2026-03-30T12:34:14.777831" level="INFO">${before} = 0 seconds</msg>
+<var>${before}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-03-30T12:34:14.777376" elapsed="0.000792"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${before}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-30T12:34:14.780064" elapsed="0.001056"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-03-30T12:34:14.781933" elapsed="0.002954"/>
+</kw>
+<kw name="Get Selenium Implicit Wait" owner="SeleniumLibrary">
+<msg time="2026-03-30T12:34:14.785757" level="INFO">${after} = 5 seconds</msg>
+<var>${after}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-03-30T12:34:14.785332" elapsed="0.000520"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${after}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-30T12:34:14.786776" elapsed="0.002392"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-30T12:34:14.789744" elapsed="2.323501"/>
+</kw>
+<status status="PASS" start="2026-03-30T12:34:07.197757" elapsed="9.916351"/>
+</test>
+<status status="PASS" start="2026-03-30T12:34:05.914588" elapsed="11.200691"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Waits" id="s1" pass="1" fail="0" skip="0">Waits</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
