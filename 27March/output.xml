@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on win32)" generated="2026-03-27T15:43:07.526234" rpa="false" schemaversion="5">
+<suite id="s1" name="Action Chains" source="C:\Users\DELL\Desktop\Capegemini Training\automation &amp;testing\27March\action_chains.robot">
+<test id="s1-t1" name="Handling Drag And Drop" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:43:07.952725" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-27T15:43:07.952257" elapsed="8.948946"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-27T15:43:16.906196" elapsed="0.065596"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-27T15:43:16.973800" level="INFO">Clicking element '//a[text()="Drag and Drop"]'.</msg>
+<arg>//a[text()="Drag and Drop"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-27T15:43:16.972728" elapsed="0.991172"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:43:19.968220" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:43:17.966751" elapsed="2.001995"/>
+</kw>
+<kw name="Drag And Drop" owner="SeleniumLibrary">
+<arg>id=column-a</arg>
+<arg>id=column-b</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" start="2026-03-27T15:43:19.970175" elapsed="0.679119"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-27T15:43:22.652400" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-27T15:43:20.650242" elapsed="2.002480"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-27T15:43:22.653741" elapsed="3.021147"/>
+</kw>
+<status status="PASS" start="2026-03-27T15:43:07.950383" elapsed="17.725790"/>
+</test>
+<doc>Handling elements</doc>
+<status status="PASS" start="2026-03-27T15:43:07.529364" elapsed="18.150195"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Action Chains" id="s1" pass="1" fail="0" skip="0">Action Chains</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
