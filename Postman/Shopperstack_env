@@ -1,0 +1,76 @@
+{
+	"id": "4675b8ad-b489-4a04-aa35-7953e24b042d",
+	"name": "Shopperstack_env",
+	"values": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "shopperId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "shopperEmail",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "shopperpwd",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "jwtToken",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "addressId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "jwttoken",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "productId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "CartProductId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "itemId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "orderId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"color": null,
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2026-04-10T07:31:31.197Z",
+	"_postman_exported_using": "Postman/12.5.6"
+}

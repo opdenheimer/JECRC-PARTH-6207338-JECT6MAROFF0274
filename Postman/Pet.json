@@ -1,0 +1,364 @@
+{
+  "info": {
+    "_postman_id": "e8ee1e8b-bd41-459d-b854-7886f975044e",
+    "name": "Pet Store",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53806303",
+    "_collection_link": "https://go.postman.co/collection/53806303-e8ee1e8b-bd41-459d-b854-7886f975044e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Store",
+      "item": [
+        {
+          "name": "Get Inventories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/store/inventory",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "store",
+                "inventory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Place an order for pet",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cache-Control",
+                "value": "no-cache",
+                "description": "\n",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 44,\r\n  \"petId\": 4,\r\n  \"quantity\": 6,\r\n  \"shipDate\": \"2026-04-07T07:49:37.471Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/store/order",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "store",
+                "order"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Purchase by id",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Body matches string\", function () {\r",
+                  "    pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Body is correct\", function () {\r",
+                  "    pm.response.to.have.body(\"response_body_string\");\r",
+                  "});\r",
+                  "pm.test(\"Response time is less than 200ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/store/order/44",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "store",
+                "order",
+                "44"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/store/order/44",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "store",
+                "order",
+                "44"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "pet",
+      "item": [
+        {
+          "name": "New Pet",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 34,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 34,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pet",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update pet status",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 34,\r\n  \"category\": {\r\n    \"id\": 34,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 34,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"sold\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pet",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pet by status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/pet/findByStatus?status=pending",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pet",
+                "findByStatus"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "available",
+                  "disabled": true
+                },
+                {
+                  "key": "status",
+                  "value": "sold",
+                  "disabled": true
+                },
+                {
+                  "key": "status",
+                  "value": "pending"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pet by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/pet/34",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pet",
+                "34"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update pet data",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "peeny",
+                  "type": "text",
+                  "uuid": "4b911dee-090a-4a2b-b2e6-9942b93653a3"
+                },
+                {
+                  "key": "status",
+                  "value": "sold",
+                  "type": "text",
+                  "uuid": "8d808462-b8a0-44d9-9c03-d4b4fb717df6"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/pet/34?id=34",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pet",
+                "34"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "34"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upload of img",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "additionalMetadata",
+                  "value": "test img",
+                  "type": "text",
+                  "uuid": "4d9cf549-db28-4693-975a-97c6612068a6"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "83ea0bb1-4c6b-4ddb-b414-a95ada995ebf",
+                  "src": "postman-cloud:///1f132684-d0d4-4960-b8c9-5aa7a0be347e"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/pet/34/uploadImage",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pet",
+                "34",
+                "uploadImage"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": ""
+    }
+  ]
+}
